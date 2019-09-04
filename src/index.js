@@ -7,6 +7,7 @@ import SearchInput from "./components/commun/Input";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
+  const [term, setTerm] = useState("");
   const [activeDay, setActiveDay] = useState({
     name: "Tuesday",
     short: "Tue",
@@ -17,11 +18,12 @@ function App() {
       value={{
         activeDay: activeDay,
         setActiveDay: setActiveDay,
-        setShowForm: setShowForm
+        setShowForm: setShowForm,
+        term: term
       }}
     >
       <div className="App">
-        <SearchInput showForm={showForm} />
+        <SearchInput showForm={showForm} term={term} setTerm={setTerm} />
         <Weather />
         <GlobalStyle />
       </div>

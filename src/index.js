@@ -3,8 +3,10 @@ import ReactDOM from "react-dom";
 import Weather from "./components/Weather";
 import { GlobalStyle } from "./Global";
 import { WeatherProvider } from "./WeatherContext";
+import SearchInput from "./components/commun/Input";
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
   const [activeDay, setActiveDay] = useState({
     name: "Tuesday",
     short: "Tue",
@@ -14,10 +16,12 @@ function App() {
     <WeatherProvider
       value={{
         activeDay: activeDay,
-        setActiveDay: setActiveDay
+        setActiveDay: setActiveDay,
+        setShowForm: setShowForm
       }}
     >
       <div className="App">
+        <SearchInput showForm={showForm} />
         <Weather />
         <GlobalStyle />
       </div>

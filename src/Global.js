@@ -17,6 +17,11 @@ export const GlobalStyle = createGlobalStyle`
 		clear: both;
 	}
 
+	.App {
+		width: auto;
+		position: relative;
+	}
+
 	body {
 		margin: 0;
 		width: 100%;

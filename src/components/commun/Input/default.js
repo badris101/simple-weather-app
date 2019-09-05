@@ -6,6 +6,18 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 35px;
+  ${({ showForm }) => showForm && "animation: Yoooo 1s forwards 0s linear"};
+
+  @keyframes Yoooo {
+    0% {
+      transform: rotate(0) translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0);
+      opacity: 1;
+    }
+  }
 
   .uppercase {
     text-transform: uppercase;
@@ -14,7 +26,7 @@ export const Container = styled.div`
   .btn {
     opacity: 0;
     visibility: hidden;
-    transition: all 1s ease;
+    transition: all 1.2s ease;
     display: inline-block;
     background: transparent;
     color: inherit;
@@ -39,7 +51,7 @@ export const Container = styled.div`
   .form {
     opacity: 0;
     visibility: hidden;
-    transition: all 0.7s ease;
+    transition: all 1s ease;
 
     &.active {
       opacity: 1;

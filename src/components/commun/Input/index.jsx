@@ -6,24 +6,25 @@ export default ({ showForm, term, setTerm }) => {
     e.persist();
     e.preventDefault();
 
-    const email = e.target.email.value;
-    console.log(email);
+    const search_term = e.target.search_term.value;
+    console.log(search_term);
+    setTerm("");
   };
 
   return (
-    <Container>
+    <Container showForm={showForm}>
       <div className="container__item">
         <form
           onSubmit={handleSubmit}
           className={showForm ? "form active" : "form"}
         >
           <input
-            name="email"
-            type="email"
+            name="search_term"
+            type="text"
             value={term}
             onChange={e => setTerm(e.target.value)}
             className="form__field"
-            placeholder="Your E-Mail Address"
+            placeholder="Name of the City"
           />
           <button
             type="submit"

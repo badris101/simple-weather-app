@@ -30,6 +30,7 @@ function App() {
     </WeatherProvider>
   );
 }
+
 /* *************************************************** */
 /* Source Code : https://codepen.io/Call_in/pen/pMYGbZ */
 /* *************************************************** */
